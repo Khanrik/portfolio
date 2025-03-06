@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import { NavbarButton } from "./NavbarButton";
+import { NavbarButtons } from "./NavbarButtons";
 
 export const MobileMenu = ({menuOpen, setMenuOpen}) => {
     useEffect(() => {
@@ -15,13 +15,7 @@ export const MobileMenu = ({menuOpen, setMenuOpen}) => {
                 &times;
             </button>
 
-            <NavbarButton menuOpen={menuOpen} setMenuOpen={setMenuOpen} buttonText="Home" isMobileButton={true} />
-
-            <NavbarButton menuOpen={menuOpen} setMenuOpen={setMenuOpen} buttonText="About" isMobileButton={true} />
-
-            <NavbarButton menuOpen={menuOpen} setMenuOpen={setMenuOpen} buttonText="Projects" isMobileButton={true} />
-
-            <NavbarButton menuOpen={menuOpen} setMenuOpen={setMenuOpen} buttonText="Contact" isMobileButton={true} />
+            <NavbarButtons menuOpen={menuOpen} setMenuOpen={setMenuOpen} isMobileButton={true} />
         </div>
     );
 };
