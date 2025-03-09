@@ -1,7 +1,0 @@
-/* App.css or global CSS file */
-.bg-radial-ellipse {
-    background: radial-gradient(ellipse 100% 125% at 50% 0%, 
-                                #1A1824, 
-                                #1A1824 50%, 
-                                #121212 75%);
-}

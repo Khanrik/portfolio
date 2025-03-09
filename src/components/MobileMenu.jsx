@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { NavbarButtons } from "./NavbarButtons";
 
-export const MobileMenu = ({menuOpen, setMenuOpen}) => {
+export const MobileMenu = ({menuOpen, setMenuOpen, setIsDarkMode}) => {
     useEffect(() => {
         document.body.style.overflow = menuOpen ? "hidden" : ""
     }, [menuOpen]);
@@ -15,7 +15,7 @@ export const MobileMenu = ({menuOpen, setMenuOpen}) => {
                 &times;
             </button>
 
-            <NavbarButtons menuOpen={menuOpen} setMenuOpen={setMenuOpen} isMobileButton={true} />
+            <NavbarButtons menuOpen={menuOpen} setMenuOpen={setMenuOpen} isMobileButton={true} setIsDarkMode={setIsDarkMode} />
         </div>
     );
 };

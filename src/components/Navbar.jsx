@@ -1,21 +1,22 @@
 import { useEffect } from "react";
 import { NavbarButtons } from "./NavbarButtons";
 
-export const Navbar = ({menuOpen, setMenuOpen}) => {
+export const Navbar = ({menuOpen, setMenuOpen, isHomeVisible, setIsDarkMode}) => {
     const reload = () => {
         window.location.reload();
     };
 
-    {/* https://www.youtube.com/watch?v=LGdPMf-SgBA&t=3124s */}
+{/* https://www.youtube.com/watch?v=LGdPMf-SgBA&t=3124s */}
     useEffect(() => {
-        document.body.style.overflow = menuOpen ? "hidden" : ""
+        document.body.style.overflow = menuOpen ? "hidden" : "";
     }, [menuOpen]);
 
     return (
-        <nav className="fixed top-0 w-full z-40 bg-[rgba(26,24,36,0.8)]">
-            <div className="max-w-5xl mx-auto px-4">
+        <nav className="fixed top-0 w-full z-40">
+            <div className={`absolute inset-0 bg-[var(--secondBackground)] transition-opacity duration-700 ${isHomeVisible ? 'opacity-0' : 'opacity-90'}`}></div>
+            <div className="relative max-w-5xl mx-auto px-4">
                 <div className="flex justify-between items-center h-16">
-                    <button onClick={reload} className="font-mono text-xl font-bold text-white cursor-pointer"> 
+                    <button onClick={reload} className="font-mono text-xl font-bold text-[var(--bodyText)] cursor-pointer"> 
                         Henrik Huynh
                     </button>
 
@@ -24,7 +25,7 @@ export const Navbar = ({menuOpen, setMenuOpen}) => {
                     </div>
 
                     <div className="hidden md:flex items-center space-x-8">
-                        <NavbarButtons menuOpen={menuOpen} setMenuOpen={setMenuOpen} isMobileButton={false} />
+                        <NavbarButtons menuOpen={menuOpen} setMenuOpen={setMenuOpen} isMobileButton={false} setIsDarkMode={setIsDarkMode} />
                     </div>
                 </div>
             </div>
