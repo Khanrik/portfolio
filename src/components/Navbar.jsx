@@ -3,7 +3,7 @@ import { NavbarButtons } from "./NavbarButtons";
 
 export const Navbar = ({menuOpen, setMenuOpen, isHomeVisible, setIsDarkMode}) => {
     const reload = () => {
-        window.location.reload();
+        window.location.href = '/';
     };
 
 {/* https://www.youtube.com/watch?v=LGdPMf-SgBA&t=3124s */}

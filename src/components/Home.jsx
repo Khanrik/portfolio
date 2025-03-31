@@ -13,7 +13,7 @@ export const Home = () => {
                         </h1>
                         <a href={CV} download="CV_Henrik_Huynh" className="mt-8">
                             <button className="px-6 py-3 bg-[var(--headerText)]/50 rounded-xl text-[var(--bodyText)] text-lg shadow-md hover:bg-[var(--headerText)] transition cursor-pointer">
-                                Download CV
+                                Get my CV
                             </button>
                         </a>
                     </div>
