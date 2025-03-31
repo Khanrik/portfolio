@@ -7,6 +7,8 @@ import { About } from './components/About';
 import { InfoCards } from './components/InfoCards';
 import { educationData } from './components/EducationData';
 import { projectData } from './components/ProjectData';
+import { Contact } from './components/Contact';
+import { Bottom } from './components/Bottom';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -43,6 +45,8 @@ function App() {
       <About />
       <InfoCards title="Education" data={educationData} />
       <InfoCards title="Projects" data={projectData} />
+      <Contact />
+      <Bottom />
     </div>
   );
 }
