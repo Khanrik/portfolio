@@ -1,19 +1,20 @@
 import { useState } from 'react';
+import { MdDarkMode, MdLightMode } from 'react-icons/md';
 
 export const NavbarButtons = ({ menuOpen, setMenuOpen, isMobileButton, setIsDarkMode }) => {
-    const [buttonText, setButtonText] = useState("☾");
+    const [buttonText, setButtonText] = useState("dark");
 
     const toggleDarkMode = () => {
-        setButtonText((prevText) => (prevText === "☾" ? "☼" : "☾"));
+        setButtonText((prevText) => (prevText === "dark" ? "light" : "dark"));
         setIsDarkMode((prev) => !prev);
         setMenuOpen(false);
     };
 
     const normalButton = ({ buttonText, href }) => {
-        if (buttonText === "☾" || buttonText === "☼") {
+        if (buttonText === "dark" || buttonText === "light") {
             return (
                 <button onClick={toggleDarkMode} className="text-[var(--bodyText)] hover:text-[var(--headerText)] transition-colors cursor-pointer">
-                    {buttonText}
+                    {buttonText === "dark" ? <MdDarkMode/> : <MdLightMode/>}
                 </button>
             );
         }
@@ -25,7 +26,7 @@ export const NavbarButtons = ({ menuOpen, setMenuOpen, isMobileButton, setIsDark
     };
 
     const mobileButton = ({ buttonText, href }) => {
-        if (buttonText === "☾" || buttonText === "☼") {
+        if (buttonText === <MdDarkMode/> || buttonText === <MdLightMode/>) {
             return (
                 <button
                     onClick={toggleDarkMode}
