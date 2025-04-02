@@ -8,7 +8,7 @@ export const About = () => {
         <section id="about">
             <RevealOnScroll>
                 <div className="w-screen min-h-screen flex flex-col items-center justify-center bg-var(--mainBackground)">
-                    <div className="container mx-auto px-8 flex flex-col-reverse md:flex-row items-center justify-between">
+                    <div className="container mx-auto px-8 flex flex-col md:flex-row items-center justify-between">
                         <div className="max-w-xl">
                             <h1 className="text-4xl font-bold text-[var(--headerText)] mb-4">About</h1>
                             <p className="text-xl text-bodyText">

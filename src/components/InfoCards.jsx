@@ -3,7 +3,7 @@ import { RevealOnScroll } from './RevealOnScroll';
 
 export const InfoCards = ({ title, data }) => {
     return (
-        <section id={title.toLowerCase()}  className="min-h-screen flex items-center justify-center py-20">
+        <section id={title.toLowerCase()}  className="min-h-screen/2 flex items-center justify-center py-20">
             <RevealOnScroll>
                 <div className="text-center my-8">
                     <h2 className="text-3xl font-semibold text-[var(--headerText)] mb-4">{title}</h2>

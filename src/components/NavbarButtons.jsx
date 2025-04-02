@@ -26,13 +26,10 @@ export const NavbarButtons = ({ menuOpen, setMenuOpen, isMobileButton, setIsDark
     };
 
     const mobileButton = ({ buttonText, href }) => {
-        if (buttonText === <MdDarkMode/> || buttonText === <MdLightMode/>) {
+        if (buttonText === "dark" || buttonText === "light") {
             return (
-                <button
-                    onClick={toggleDarkMode}
-                    className={`text-2xl font-semibold text-gray-200 hover:text-[var(--headerText)] my-4 transform transition-transform duration-500 ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5"} cursor-pointer`}
-                >
-                    {buttonText}
+                <button onClick={toggleDarkMode} className={`text-2xl font-semibold text-gray-200 hover:text-[var(--headerText)] my-4 transform transition-transform duration-500 ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5"} cursor-pointer`}>
+                    {buttonText === "dark" ? <MdDarkMode/> : <MdLightMode/>}
                 </button>
             );
         }
