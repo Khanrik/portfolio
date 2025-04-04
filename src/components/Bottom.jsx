@@ -4,7 +4,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 export const Bottom = () => {
     return (
-        <div className="w-full">
+        <div className="w-full mt-6">
             <div className="flex justify-between items-center px-4 py-2 bg-[var(--cardBackground)]">
                 <div className="text-xs text-[var(--bodyText)]">
                     Designed and developed by Henrik H. Huynh

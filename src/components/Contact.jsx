@@ -5,11 +5,30 @@ export const Contact = () => {
         <RevealOnScroll>
         <div className="w-screen min-h-screen flex flex-col items-center justify-center bg-var(--mainBackground)">
             <div className="container mx-auto px-8 flex flex-col md:flex-row items-center justify-between">
-                    <div className='w-1/2'>
-                        <h2 className="text-3xl font-semibold text-[var(--headerText)] mb-4">
-                            Get in touch with me
+                    <div className='w-1/2 pr-12'>
+                        <h2 className="text-4xl font-semibold text-[var(--headerText)] mb-4">
+                            Get In Touch With Me!
                         </h2>
-                        <form className='space-y-6'>
+                        <div className="text-xl font-semibold text-[var(--bodyText)] mb-6">
+                            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Whether you have a question or just want to say hi, feel free to reach out!
+                        </div>
+                        <div>
+                            <text className='text-[var(--headerText)]'>Full Name: </text>
+                            <text>Henrik Hoangkhanh Huynh</text>
+                        </div>
+                        <div>
+                            <text className='text-[var(--headerText)]'>Email: </text>
+                            <a href='mailto:henrik.huynh@yahoo.dk' target='_blank' rel='noopener noreferrer' className='text-[var(--bodyText)] hover:text-[var(--headerText)] transition-colors'>henrik.huynh@yahoo.dk</a>
+                        </div>
+                        <div className='mb-6'>
+                            <text className='text-[var(--headerText)]'>LinkedIn: </text>
+                            <a href='https://www.linkedin.com/in/henrik-huynh-708067285/' target='_blank' rel='noopener noreferrer' className='text-[var(--bodyText)] hover:text-[var(--headerText)] transition-colors'>https://www.linkedin.com/in/henrik-huynh-708067285/</a>
+                        </div>
+
+                    </div>
+
+                    <div className='w-1/2 space-y-6'>
+                    <form className='space-y-6'>
                             <div className="relative">
                                 <input 
                                     type='text' 
@@ -47,10 +66,6 @@ export const Contact = () => {
                                 Send Message
                             </button>
                         </form>
-                    </div>
-
-                    <div className='mb-8 md:mb-0 md:ml-8 w-64 h-64 bg-[var(--cardBackground)] rounded-full flex items-center justify-center'>
-                        Right section
                     </div>
                 </div>
             </div>
