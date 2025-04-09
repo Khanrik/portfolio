@@ -15,7 +15,7 @@ export const About = () => {
                                 I'm a computer engineering student doing something with my life ig
                             </p>
                         </div>
-                        <div className="mb-8 md:mb-0 md:ml-8">
+                        <div className="mt-8 md:mb-0 md:ml-8">
                             <div className="w-64 h-64 bg-[var(--cardBackground)] rounded-full flex items-center justify-center">
                                 <img
                                     src={ReactLogo}
