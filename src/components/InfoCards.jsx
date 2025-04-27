@@ -26,7 +26,7 @@ export const InfoCards = ({ title, data }) => {
     const isScrollable = data.length > 3; // Show scrollable container only if there are more than 3 cards
 
     return (
-        <section id={title.toLowerCase()} className="h-1/2 flex flex-col items-center justify-center py-20">
+        <section id={title.toLowerCase()} className="h-1/2 flex flex-col justify-center py-20">
             <RevealOnScroll>
                 <div className="text-center my-8 w-9/10 mx-auto">
                     <h2 className="text-4xl font-semibold text-[var(--headerText)] mb-4">{title}</h2>
@@ -60,7 +60,7 @@ export const InfoCards = ({ title, data }) => {
                                                 flexShrink: 0, // Prevent cards from shrinking
                                             }}
                                         >
-                                            <img src={item.image} alt={item.name} className="w-20 h-20 mb-4" />
+                                            <img src={item.image} alt={item.name} className="mb-4" />
                                             <h3 className="text-xl font-semibold text-[var(--headerText)] mb-2">
                                                 {item.name} <br /> {item.date}
                                             </h3>
@@ -79,7 +79,7 @@ export const InfoCards = ({ title, data }) => {
                             </>
                         ) : (
                             /* Static Grid Layout for 3 or Fewer Cards */
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center">
                                 {data.map((item, index) => (
                                     <div
                                         key={index}
