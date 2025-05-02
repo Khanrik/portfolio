@@ -12,7 +12,7 @@ export const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm(import.meta.env.VIT_SERVICE_ID, import.meta.env.VIT_TEMPLATE_ID, e.target, import.meta.env.VIT_PUBLIC_KEY)
+        emailjs.sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, e.target, import.meta.env.VITE_PUBLIC_KEY)
             .then((result) => {
                 console.log(result.text);
                 alert('Message sent successfully!');
@@ -45,11 +45,11 @@ export const Contact = () => {
                             8210 Aarhus V
                         </div>
                         <div>
-                            <text className='text-[var(--headerText)]'>Email: </text>
+                            <div className='text-[var(--headerText)]'>Email: </div>
                             <a href='mailto:henrik.huynh@yahoo.dk' target='_blank' rel='noopener noreferrer' className='text-[var(--bodyText)] hover:text-[var(--headerText)] transition-colors'>henrik.huynh@yahoo.dk</a>
                         </div>
                         <div>
-                            <text className='text-[var(--headerText)]'>LinkedIn: </text>
+                            <div className='text-[var(--headerText)]'>LinkedIn: </div>
                             <a href='https://www.linkedin.com/in/henrik-huynh-708067285/' target='_blank' rel='noopener noreferrer' className='text-[var(--bodyText)] hover:text-[var(--headerText)] transition-colors'>https://www.linkedin.com/in/henrik-huynh-708067285/</a>
                         </div>
 
@@ -85,7 +85,7 @@ export const Contact = () => {
 
                             <div className="relative">
                                 <textarea 
-                                    id='email'
+                                    id='message'
                                     name='message'
                                     required
                                     rows='4'
