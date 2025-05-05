@@ -41,10 +41,10 @@ export const Contact = () => {
                         <div className="font-semibold">
                             Henrik Hoangkhanh Huynh
                         </div>
-                        <div>
+                        <div className='mb-2'>
                             8210 Aarhus V
                         </div>
-                        <div>
+                        <div className='mb-2'>
                             <div className='text-[var(--headerText)]'>Email: </div>
                             <a href='mailto:henrik.huynh@yahoo.dk' target='_blank' rel='noopener noreferrer' className='text-[var(--bodyText)] hover:text-[var(--headerText)] transition-colors'>henrik.huynh@yahoo.dk</a>
                         </div>

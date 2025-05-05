@@ -89,7 +89,7 @@ export const InfoCards = ({ title, data }) => {
                                 </button>
                             </>
                         ) : (
-                            <div className="flex gap-8 justify-center items-center">
+                            <div className="flex gap-8 justify-center">
                                 {makeCards()}
                             </div>
                         )}
