@@ -31,7 +31,7 @@ export const InfoCards = ({ title, data }) => {
                     flexShrink: 0, // Prevent cards from shrinking
                 }}
             >
-                <img src={item.image} alt={item.name} className="w-20 h-20 mb-4" />
+                <img src={item.image} alt={item.name} className="w-30 h-30 mb-4 rounded-xl" />
                 <h3 className="text-xl font-semibold text-[var(--headerText)] mb-2">
                     {item.name} <br /> {item.date}
                 </h3>
