@@ -5,6 +5,8 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 export const InfoCards = ({ title, data }) => {
     const scrollContainerRef = useRef(null);
     const [screenWidth, setScreenWidth] = useState(window.innerWidth); // Initialize with current screen width
+    const [atStart, setAtStart] = useState(true);
+    const [atEnd, setAtEnd] = useState(false);
 
     // Update screen width on window resize
     useEffect(() => {
@@ -18,6 +20,21 @@ export const InfoCards = ({ title, data }) => {
             window.removeEventListener("resize", handleResize);
         };
     }, []);
+
+    const checkScrollPosition = () => {
+        const el = scrollContainerRef.current;
+        if (!el) return;
+        setAtStart(el.scrollLeft === 0);
+        setAtEnd(el.scrollLeft + el.clientWidth >= el.scrollWidth - 1);
+    };
+
+    useEffect(() => {
+        const el = scrollContainerRef.current;
+        if (!el) return;
+        el.addEventListener('scroll', checkScrollPosition);
+        checkScrollPosition();
+        return () => el.removeEventListener('scroll', checkScrollPosition);
+    }, [data, screenWidth]);
 
     // Function to generate cards
     const makeCards = () => {
@@ -46,6 +63,7 @@ export const InfoCards = ({ title, data }) => {
                 left: direction === "left" ? -430 : 430, // Scroll left or right based on the direction
                 behavior: "smooth",
             });
+            setTimeout(checkScrollPosition, 400); // update after scroll animation
         }
     };
 
@@ -63,7 +81,8 @@ export const InfoCards = ({ title, data }) => {
                                 {/* Left Arrow */}
                                 <button
                                     onClick={() => scroll("left")}
-                                    className="absolute left-[-40px] top-1/2 transform -translate-y-1/2 bg-[var(--cardBackground)] text-[var(--bodyText)] p-2 rounded-full shadow-md hover:bg-[var(--headerText)] transition z-10 cursor-pointer"
+                                    className={`absolute left-[-40px] top-1/2 transform -translate-y-1/2 bg-[var(--cardBackground)] text-[var(--bodyText)] p-2 rounded-full shadow-md transition z-10 ${atStart ? "opacity-25" : "hover:bg-[var(--headerText)] cursor-pointer"}`}
+                                    disabled={atStart}
                                 >
                                     <FaArrowLeft />
                                 </button>
@@ -74,7 +93,6 @@ export const InfoCards = ({ title, data }) => {
                                     className="flex gap-8 overflow-x-auto scroll-smooth no-scrollbar"
                                     style={{
                                         maxWidth: "100%", // Ensure the container doesn't stretch
-                                        overflow: "hidden", // Hide overflowing cards
                                     }}
                                 >
                                     {makeCards()}
@@ -83,7 +101,8 @@ export const InfoCards = ({ title, data }) => {
                                 {/* Right Arrow */}
                                 <button
                                     onClick={() => scroll("right")}
-                                    className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 bg-[var(--cardBackground)] text-[var(--bodyText)] p-2 rounded-full shadow-md hover:bg-[var(--headerText)] transition z-10 cursor-pointer"
+                                    className={`absolute right-[-40px] top-1/2 transform -translate-y-1/2 bg-[var(--cardBackground)] text-[var(--bodyText)] p-2 rounded-full shadow-md transition z-10 ${atEnd ? "opacity-25" : "hover:bg-[var(--headerText)] cursor-pointer"}`}
+                                    disabled={atEnd}
                                 >
                                     <FaArrowRight />
                                 </button>
