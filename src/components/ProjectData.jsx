@@ -1,36 +1,35 @@
-import ReactLogo from '../assets/react.svg';
-import Portfolio from '../assets/Portfolio.png';
-import AstroPiLogo from '../assets/AstroPiLogo.png';
-import EEELogo from '../assets/EEELogo.png';
+const images = import.meta.glob('../assets/*.{png,jpg,jpeg,svg}', { eager: true, import: 'default' });
 
-export const projectData = [
+export const projectData = (isDarkMode) => [
     {
         name: "This Portfolio Site",
-        image: Portfolio,
+        image: isDarkMode
+            ? images['../assets/PortfolioDark.png'] || images['../assets/Portfolio.png']
+            : images['../assets/PortfolioLight.png'] || images['../assets/Portfolio.png'],
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         date: "",
     },
     {
         name: "Astro Pi 2022/23",
-        image: AstroPiLogo,
+        image: images['../assets/AstroPiLogo.png'],
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         date: ""
     },
     {
         name: "Excellent Email Experience",
-        image: EEELogo,
+        image: images['../assets/EEELogo.png'],
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         date: ""
     },
     {
         name: "Forth Interpreter",
-        image: ReactLogo,
+        image: images['../assets/react.svg'],
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         date: "",
     },
     {
         name: "JWST Image Painter",
-        image: ReactLogo,
+        image: images['../assets/CarinaNebula.png'],
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         date: ""
     }

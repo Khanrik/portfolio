@@ -44,7 +44,7 @@ function App() {
       </div>
       <About />
       <InfoCards title="Education" data={educationData} />
-      <InfoCards title="Projects" data={projectData} />
+      <InfoCards title="Projects" data={projectData(isDarkMode)} />
       <Contact />
       <Bottom />
     </div>
