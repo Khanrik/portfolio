@@ -36,7 +36,7 @@ function App() {
   }, []);
 
   return (
-    <div className={`overflow-x-hidden ${isDarkMode ? 'dark' : 'light'} bg-[var(--mainBackground)] text-[var(--bodyText)]`}>
+    <div className={`${isDarkMode ? 'dark' : 'light'} bg-[var(--mainBackground)] text-[var(--bodyText)]`}>
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} isHomeVisible={isHomeVisible} setIsDarkMode={setIsDarkMode} />
       <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} setIsDarkMode={setIsDarkMode} />
       <div ref={homeRef}>

@@ -48,7 +48,7 @@ export const NavbarButtons = ({ menuOpen, setMenuOpen, isMobileButton, setIsDark
             );
         }
         return (
-            <a href={href} className="text-[var(--bodyText)] hover:text-[var(--headerText)] transition-colors">
+            <a href={href} className="text-[var(--bodyText)] hover:text-[var(--headerText)] hover:underline hover:underline-offset-8 transition-colors">
                 {buttonText}
             </a>
         );
@@ -90,7 +90,7 @@ export const NavbarButtons = ({ menuOpen, setMenuOpen, isMobileButton, setIsDark
             <a
                 href={href}
                 onClick={() => setMenuOpen(false)}
-                className={`text-2xl font-semibold text-gray-200 hover:text-[var(--headerText)] my-4 transform transition-transform duration-500 ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5"}`}
+                className={`text-2xl font-semibold text-gray-200 hover:text-[var(--headerText)] hover:underline hover:underline-offset-4 my-4 transform transition-transform duration-500 ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5"}`}
             >
                 {buttonText}
             </a>
