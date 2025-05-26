@@ -24,7 +24,7 @@ export const educationData = [
             </>,
         date:
             <>
-                2020 -- 2023
+                2020 – 2023
             </>
     },
     {
@@ -38,6 +38,9 @@ export const educationData = [
                 Aside from those, I have also worked on smaller projects where I used technologies such as ROS, Verilog, and Sireum Logika.
                 Furthermore, some courses required data analysis, which I have done using Python, R, and MATLAB.
             </>,
-        date: "2023 – present"
+        date: 
+            <>
+            2023 – Present
+            </>
     }
 ];
