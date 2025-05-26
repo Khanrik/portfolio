@@ -1,6 +1,7 @@
 import React from "react";
 import { DiGithubBadge } from "react-icons/di";
 import { FaLinkedin } from "react-icons/fa";
+import { IoMailSharp } from "react-icons/io5";
 
 export const Bottom = () => {
     return (
@@ -18,6 +19,11 @@ export const Bottom = () => {
                     <a href="https://github.com/Khanrik" target="_blank">
                         <button className="text-[var(--bodyText)] hover:text-[var(--headerText)] transition-colors cursor-pointer">
                             <DiGithubBadge/>
+                        </button>
+                    </a>
+                    <a href="mailto:henrik.huynh@yahoo.dk" target="_blank">
+                        <button className="text-[var(--bodyText)] hover:text-[var(--headerText)] transition-colors cursor-pointer">
+                            <IoMailSharp />
                         </button>
                     </a>
                 </div>
