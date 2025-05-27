@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { NavbarButtons } from "./NavbarButtons";
+import logo from "/WebsiteLogo.svg";
 
 export const Navbar = ({menuOpen, setMenuOpen, isHomeVisible, setIsDarkMode}) => {
     const reload = () => {
@@ -17,6 +18,7 @@ export const Navbar = ({menuOpen, setMenuOpen, isHomeVisible, setIsDarkMode}) =>
             <div className="relative max-w-5xl mx-auto px-4">
                 <div className="flex justify-between items-center h-16">
                     <button onClick={reload} className="font-mono text-xl font-bold text-[var(--bodyText)] cursor-pointer"> 
+                        <img src={logo} alt="Logo" className="w-8 h-8 inline-block mr-4" />
                         Henrik Huynh
                     </button>
 
