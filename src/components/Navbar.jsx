@@ -4,7 +4,7 @@ import logo from "/WebsiteLogo.svg";
 
 export const Navbar = ({menuOpen, setMenuOpen, isHomeVisible, setIsDarkMode}) => {
     const reload = () => {
-        window.location.href = '/';
+        window.location.href = import.meta.env.BASE_URL || '/portfolio/';
     };
 
 {/* https://www.youtube.com/watch?v=LGdPMf-SgBA&t=3124s */}

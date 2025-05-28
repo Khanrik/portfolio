@@ -11,7 +11,7 @@ export const projectData = (isDarkMode) => [
         description:
             <>
                 To get the elephant out of the room, this is my portfolio site project. The purpose of the site was to learn the React framework and JavaScript.
-                It is styles using Tailwind CSS and is hosted on GitHub pages.
+                It is styled using Tailwind CSS and is hosted on GitHub pages.
                 Since it is a learning project, I have taken inspiration from various sources but mainly <a className="text-[var(--headerText)] hover:underline" href="https://www.youtube.com/@PedroTechnologies" target="_blank">PedroTech</a>.
                 The site is designed to work on both desktop and mobile devices. The source code can be found in the <a className="text-[var(--headerText)] hover:underline" href="https://github.com/Khanrik/portfolio" target="_blank">repository</a>.
             </>,
@@ -35,7 +35,7 @@ export const projectData = (isDarkMode) => [
         description: 
             <>
                 Excellent Email Experience (EEE) is an email client project made for my software engineering course.
-                This course was about the software development process, more specifically the Agile methodologies.
+                This course was about the software development process, more specifically the agile methodologies.
                 The project was made in C# using the .NET framework and Windows UI Library for backend and frontend respectively.
                 My main role along with backend functionality was developing the database using SQLite.
                 The project can be found in our <a className="text-[var(--headerText)] hover:underline" href="https://github.com/mikkelraben/ExcellentEmailExperience" target="_blank">repository</a>, but the GMail API key is disabled, so it no longer works.

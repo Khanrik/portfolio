@@ -15,7 +15,7 @@ export const About = () => {
                                 I'm a computer engineering student from Denmark with a passion for technology and problem-solving. 
                                 I love learning new skills both for software development and leisure. 
                                 When I'm not working on any projects, I like playing piano and guitar, gaming, or climbing some problems in a bouldering gym. 
-                                This is my try at making a professional looking website so I you enjoy reading or just looking through
+                                This is my try at making a professional looking website, so I you hope you enjoy reading or just looking through.
                             </p>
                         </div>
                         <div className="mt-8 md:mb-0 md:ml-8">
